@@ -34,7 +34,6 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
   RSSignatureCaptureView signatureView;
 
   Boolean saveFileInExtStorage = false;
-  String viewMode = "portrait";
   Boolean showBorder = true;
   Boolean showNativeButtons = true;
   Boolean showTitleLabel = true;

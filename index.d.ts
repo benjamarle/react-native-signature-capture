@@ -32,12 +32,6 @@ export interface SignatureCaptureProps extends ViewProps {
   showTitleLabel?: boolean;
 
   /**
-   * Change the screen orientation based on boolean value
-   * "portrait" or "landscape"
-   */
-  viewMode?: 'portrait' | 'landscape';
-
-  /**
    * sets the max size of the image maintains aspect ratio,
    *
    * @default 500

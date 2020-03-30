@@ -111,8 +111,6 @@ class CustomComponent extends Component {
 
 + **showTitleLabel** : If this props is made to true, it will display the "x_ _ _ _ _ _ _ _ _ _ _" placeholder indicating where to sign.
 
-+ **viewMode** : "portrait" or "landscape" change the screen orientation based on boolean value
-
 + **maxSize**  : sets the max size of the image maintains aspect ratio, default is 500
 
 ### Methods
@@ -161,8 +159,7 @@ class RNSignatureExample extends Component {
                     onDragEvent={this._onDragEvent}
                     saveImageFileInExtStorage={false}
                     showNativeButtons={false}
-                    showTitleLabel={false}
-                    viewMode={"portrait"}/>
+                    showTitleLabel={false}/>
 
                 <View style={{ flex: 1, flexDirection: "row" }}>
                     <TouchableHighlight style={styles.buttonStyle}
