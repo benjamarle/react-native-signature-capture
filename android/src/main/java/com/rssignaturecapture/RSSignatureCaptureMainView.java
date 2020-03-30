@@ -33,8 +33,6 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
   LinearLayout buttonsLayout;
   RSSignatureCaptureView signatureView;
 
-  Activity mActivity;
-  int mOriginalOrientation;
   Boolean saveFileInExtStorage = false;
   String viewMode = "portrait";
   Boolean showBorder = true;
@@ -45,8 +43,6 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
   public RSSignatureCaptureMainView(Context context, Activity activity) {
     super(context);
     Log.d("React:", "RSSignatureCaptureMainView(Contructtor)");
-    mOriginalOrientation = activity.getRequestedOrientation();
-    mActivity = activity;
 
     this.setOrientation(LinearLayout.VERTICAL);
     this.signatureView = new RSSignatureCaptureView(context,this);
@@ -65,16 +61,6 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
 
   public void setSaveFileInExtStorage(Boolean saveFileInExtStorage) {
     this.saveFileInExtStorage = saveFileInExtStorage;
-  }
-
-  public void setViewMode(String viewMode) {
-    this.viewMode = viewMode;
-
-    if (viewMode.equalsIgnoreCase("portrait")) {
-      mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    } else if (viewMode.equalsIgnoreCase("landscape")) {
-      mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-    }
   }
 
   public void setShowNativeButtons(Boolean showNativeButtons) {
